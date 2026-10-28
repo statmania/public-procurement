@@ -1,0 +1,792 @@
+/* css styles */
+/* ================================================================
+   Blogkit: a dark, futuristic Quarto blog look with a light theme toggle.
+   Change the --bk-* variables below to retheme everything.
+   ================================================================ */
+
+:root{
+  --bk-bg: #05070d;
+  --bk-bg2: #0a0f1e;
+  --bk-cyan: #00e5ff;
+  --bk-purple: #a855f7;
+  --bk-pink: #ff2fb4;
+  --bk-line: rgba(0,229,255,0.25);
+  --bk-text: #e8ecf7;
+  --bk-muted: #9aa4c2;
+}
+
+html{
+  background-color: var(--bk-bg) !important;
+}
+body{
+  background-color: transparent !important;
+  color: var(--bk-text);
+}
+#quarto-content,
+.nav-footer,
+footer.footer{
+  position: relative;
+  z-index: 1;
+}
+/* Leave the header's own position (Quarto makes it fixed-top); overriding it
+   left the body's fixed-navbar padding as an empty strip above the nav. */
+/* Post body: opaque panel so the starfield stays outside the text area */
+main.content{
+  background: var(--bk-bg2);
+  border: 1px solid rgba(0,229,255,0.10);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Navbar */
+#quarto-header,
+#quarto-header .navbar{
+  background: rgba(5,7,13,0.82) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--bk-line);
+}
+#quarto-header .navbar-title,
+#quarto-header .nav-link,
+#quarto-header .navbar-toggler-icon{
+  color: var(--bk-text);
+}
+#quarto-header .navbar-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(232,236,247,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+#quarto-header .nav-link:hover,
+#quarto-header .nav-link:focus,
+#quarto-header .nav-link.active{
+  color: var(--bk-cyan) !important;
+}
+#quarto-header .dropdown-menu{
+  background: var(--bk-bg2);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+#quarto-header .dropdown-item{
+  color: #cdd6f0;
+}
+#quarto-header .dropdown-item:hover,
+#quarto-header .dropdown-item:focus{
+  background: rgba(0,229,255,0.08);
+  color: var(--bk-cyan);
+}
+
+/* Title block / post hero banner */
+#title-block-header.quarto-title-block,
+.quarto-title-banner{
+  background: radial-gradient(1200px 400px at 50% -20%, #0e1930 0%, var(--bk-bg) 70%);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+#title-block-header h1.title{
+  color: #fff;
+  background: linear-gradient(90deg, var(--bk-cyan), #7dd3fc 25%, var(--bk-purple) 55%, var(--bk-pink) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+}
+#title-block-header .subtitle,
+#title-block-header .description{ color: var(--bk-muted); }
+.quarto-title-meta-heading{ color: #7f8bab; }
+.quarto-title-meta-contents,
+.quarto-title-meta-contents p{ color: #c7cee6; }
+.quarto-title-meta-contents a{ color: var(--bk-cyan); }
+
+.quarto-categories,
+.quarto-category{
+  display: inline-flex;
+}
+.quarto-category{
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: var(--bk-cyan);
+  border: 1px solid var(--bk-line);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  background: rgba(0,229,255,0.06);
+}
+
+/* Page content (post body, about, etc.) */
+main.content h1, main.content h2, main.content h3,
+main.content h4, main.content h5, main.content h6{
+  color: #f2f5ff;
+}
+main.content h2{
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 0.3rem;
+}
+
+main.content, main.content p, main.content li, main.content td, main.content th{
+  color: #c7cee6;
+}
+
+main.content a{ color: var(--bk-cyan); }
+main.content a:hover{ color: #7dd3fc; }
+
+main.content img{
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+}
+
+main.content pre, main.content div.sourceCode{
+  background-color: var(--bk-bg2) !important;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 0.5rem;
+}
+
+main.content :not(pre) > code:not(.sourceCode > *){
+  color: #ffab70;
+  background-color: rgba(255,255,255,0.06);
+}
+/* Plain output blocks (``` with no language): readable light text on the dark panel. */
+main.content pre > code:not(.sourceCode){
+  color: #d7def2;
+  background: none;
+}
+
+main.content table{ color: #c7cee6; }
+main.content .table > :not(caption) > * > *{
+  background-color: transparent;
+  color: inherit;
+  border-bottom-color: rgba(255,255,255,0.12);
+}
+main.content thead{ color: #fff; }
+
+main.content blockquote{
+  border-left: 3px solid var(--bk-cyan);
+  color: var(--bk-muted);
+}
+main.content hr{ border-color: rgba(255,255,255,0.12); }
+
+.code-copy-button i.bi::before{ filter: invert(1) brightness(1.6); }
+
+.sidebar nav[role="doc-toc"] a{ color: var(--bk-muted); }
+.sidebar nav[role="doc-toc"] a:hover,
+.sidebar nav[role="doc-toc"] a.active{ color: var(--bk-cyan); }
+
+/* ---- Listing grid: recolor Quarto's post cards to bk-card style ---- */
+.quarto-listing-container-grid .quarto-grid-item.card{
+  position: relative;
+  background: linear-gradient(160deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015)) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.quarto-listing-container-grid .quarto-grid-item.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.45), 0 0 30px rgba(0,229,255,0.12);
+  border-color: rgba(0,229,255,0.35) !important;
+}
+.quarto-grid-link{ text-decoration: none !important; }
+.quarto-grid-item .card-body{ background: transparent !important; }
+.quarto-grid-item .listing-title{ color: #fff !important; font-weight: 700; }
+.quarto-grid-item .card-text,
+.quarto-grid-item .listing-description,
+.quarto-grid-item .listing-reading-time,
+.quarto-grid-item .listing-author,
+.quarto-grid-item .listing-date{ color: var(--bk-muted) !important; }
+.quarto-grid-item .card-attribution{ color: #7f8bab !important; }
+.listing-category{
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  color: var(--bk-cyan) !important;
+  border: 1px solid var(--bk-line);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  margin: 0 0.3rem 0.3rem 0;
+  background: rgba(0,229,255,0.06);
+  cursor: pointer;
+}
+
+/* Category cloud sidebar */
+.quarto-listing-category-title{ color: #f2f5ff; }
+.quarto-listing-category .category{
+  color: var(--bk-muted);
+}
+.quarto-listing-category .category:hover,
+.quarto-listing-category .category.active{
+  color: var(--bk-cyan);
+}
+.quarto-category-count{ color: inherit; }
+
+/* Filter / sort controls */
+.quarto-listing-filter .input-group-text,
+.quarto-listing-sort .input-group-text{
+  background: var(--bk-bg2);
+  color: var(--bk-muted);
+  border-color: rgba(255,255,255,0.12);
+}
+.quarto-listing-filter .form-control,
+.quarto-listing-sort .form-select{
+  background: var(--bk-bg2);
+  color: var(--bk-text);
+  border-color: rgba(255,255,255,0.12);
+}
+.quarto-listing-sort .form-select option{ background: var(--bk-bg2); color: var(--bk-text); }
+
+/* Pagination */
+.listing-pagination .page-link{
+  background: var(--bk-bg2);
+  color: var(--bk-text);
+  border-color: rgba(255,255,255,0.12);
+}
+.listing-pagination .page-item.active .page-link{
+  background: var(--bk-cyan);
+  border-color: var(--bk-cyan);
+  color: #04101c;
+}
+.listing-pagination .page-link:hover{ color: var(--bk-cyan); }
+
+/* Footer */
+#quarto-footer,
+.nav-footer{
+  background: var(--bk-bg2) !important;
+  color: var(--bk-muted);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.nav-footer a{ color: var(--bk-cyan); }
+
+/* Search overlay */
+#quarto-search-results,
+.aa-DetachedOverlay,
+.aa-Panel{
+  background: var(--bk-bg2) !important;
+  color: var(--bk-text) !important;
+}
+
+/* Callouts (note / tip / warning / important / caution) on the dark theme.
+   Cosmo's defaults are light-tinted panels, which leave our light body text
+   unreadable, so give them a dark panel, a coloured left border, and
+   explicit high-contrast text. */
+div.callout.callout-style-default,
+div.callout.callout-style-simple{
+  /* futuristic panel: tinted glow from the corner + faint grid lines */
+  background:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(135deg, rgba(0,229,255,0.18) 0%, rgba(168,85,247,0.10) 55%, rgba(10,15,30,0.92) 100%),
+    var(--bk-bg2) !important;
+  background:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(135deg, color-mix(in srgb, var(--callout-color, #00e5ff) 24%, transparent) 0%, rgba(168,85,247,0.10) 55%, rgba(10,15,30,0.92) 100%),
+    var(--bk-bg2) !important;
+  box-shadow: 0 0 22px color-mix(in srgb, var(--callout-color, #00e5ff) 22%, transparent), inset 0 0 0 1px rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  border-left: 5px solid var(--callout-color, var(--bk-cyan)) !important;
+  border-radius: 8px;
+  color: var(--bk-text);
+}
+div.callout.callout-style-default .callout-body-container,
+div.callout.callout-style-default .callout-body,
+div.callout.callout-style-simple .callout-body-container,
+div.callout.callout-style-simple .callout-body{
+  color: var(--bk-text) !important;
+}
+div.callout.callout-style-default > .callout-header{
+  background: rgba(255,255,255,0.05) !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+div.callout .callout-title-container,
+div.callout .callout-title-container p{
+  color: #fff !important;
+}
+div.callout.callout-note{      --callout-color: var(--bk-cyan); }
+div.callout.callout-tip{       --callout-color: #34d399; }
+div.callout.callout-important{ --callout-color: var(--bk-pink); }
+div.callout.callout-warning{   --callout-color: #fbbf24; }
+div.callout.callout-caution{   --callout-color: #fb923c; }
+div.callout code{
+  color: #8be9ff;
+  background: rgba(0,229,255,0.10);
+}
+
+/* ---- Reveal/Hide code + hint (see code-reveal.html) ---- */
+.reveal-code.rc-ready > .hint,
+.reveal-code.rc-ready > .code-copy-outer-scaffold,
+.reveal-code.rc-ready > .sourceCode,
+.reveal-code.rc-ready > pre { display: none; }
+.reveal-code.rc-ready > .hint.rc-open,
+.reveal-code.rc-ready > .code-copy-outer-scaffold.rc-open,
+.reveal-code.rc-ready > .sourceCode.rc-open,
+.reveal-code.rc-ready > pre.rc-open { display: block; }
+.reveal-code { margin: 1rem 0; }
+.rc-bar { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: .5rem; }
+.rc-btn {
+  background: transparent;
+  color: var(--bk-cyan);
+  border: 1px solid var(--bk-line);
+  border-radius: 999px;
+  padding: .25rem .9rem;
+  font-size: .85rem;
+  cursor: pointer;
+}
+.rc-btn:hover, .rc-btn:focus-visible { border-color: var(--bk-cyan); background: rgba(0,229,255,.08); }
+.reveal-code > .hint {
+  border-left: 3px solid var(--bk-purple);
+  background: rgba(168,85,247,.08);
+  padding: .6rem .9rem;
+  margin-bottom: .5rem;
+  border-radius: 0 8px 8px 0;
+  color: var(--bk-text);
+}
+.reveal-code > .hint p { margin: 0; }
+
+/* ---- Sidebar widgets: archive + tag cloud (generated by scripts/build_widgets.py) ---- */
+.bk-widget{ margin: 0 0 1.5rem 0; font-size: .9rem; }
+.bk-widget-title{ color: #f2f5ff; font-size: 1rem; margin: 0 0 .6rem 0; }
+.bk-widget summary{ cursor: pointer; color: var(--bk-muted); padding: .15rem 0; }
+.bk-widget summary:hover, .bk-widget details[open] > summary{ color: var(--bk-cyan); }
+.bk-widget ul{ list-style: none; margin: .2rem 0 .5rem 0; padding-left: .9rem; }
+.bk-widget li{ margin: .2rem 0; line-height: 1.3; }
+.bk-widget a{ color: var(--bk-text); text-decoration: none; }
+.bk-widget a:hover{ color: var(--bk-cyan); }
+.bk-month{ margin-left: .8rem; }
+.bk-count{ color: var(--bk-muted); font-size: .75em; }
+.bk-tag-cloud{ display: flex; flex-wrap: wrap; gap: .35rem; }
+.bk-tag{
+  background: rgba(0,229,255,.06);
+  color: var(--bk-cyan);
+  border: 1px solid var(--bk-line);
+  border-radius: 999px;
+  padding: .05rem .6rem;
+  cursor: pointer;
+}
+.bk-tag:hover, .bk-tag.active{ border-color: var(--bk-cyan); background: rgba(0,229,255,.16); }
+
+#bk-widgets{ margin-top: 1.5rem; }
+/* Long tag list: fixed-height scroller */
+.bk-tag-cloud{ max-height: 18rem; overflow-y: auto; padding-right: .4rem; }
+.bk-tag-cloud-all, .bk-tags .bk-tag-cloud{ max-height: none; overflow: visible; padding-right: 0; }
+.bk-tags-all{ display: inline-block; margin-top: .6rem; font-size: .85rem; text-decoration: none; color: var(--bk-cyan); }
+.bk-tags-all:hover{ text-decoration: underline; }
+/* futuristic scrollbar (WebKit/Blink); Firefox gets scrollbar-color */
+.bk-tag-cloud::-webkit-scrollbar{ width: 6px; }
+.bk-tag-cloud::-webkit-scrollbar-track{ background: rgba(0,229,255,.06); border-radius: 6px; }
+.bk-tag-cloud::-webkit-scrollbar-thumb{
+  background: linear-gradient(180deg, var(--bk-cyan), var(--bk-purple));
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,229,255,.7);
+}
+.bk-tag-cloud::-webkit-scrollbar-thumb:hover{ background: linear-gradient(180deg, var(--bk-pink), var(--bk-purple)); }
+@supports not selector(::-webkit-scrollbar){
+  .bk-tag-cloud{ scrollbar-width: thin; scrollbar-color: var(--bk-cyan) rgba(0,229,255,.06); }
+}
+a.bk-tag{ text-decoration: none; display: inline-block; }
+.bk-tags-hint{ color: var(--bk-muted); margin: 1rem 0; }
+#bk-tags-page .bk-tag-section h2,
+#bk-cats-page .bk-tag-section h2{ font-size: 1.4rem; margin: 1.5rem 0 .8rem; }
+.bk-post-list{ list-style: none; padding: 0; margin: 0; border: 0; }
+.bk-post-list li{ margin: 0 0 1rem; }
+.bk-post-list a{ font-weight: 600; }
+.bk-tp-date{ color: var(--bk-muted); font-size: .8rem; margin-left: .6rem; }
+.bk-post-list p{ margin: .2rem 0 0; color: var(--bk-muted); font-size: .9rem; }
+/* No inner scrollbar on the margin sidebar (Quarto makes it sticky + overflow:auto):
+   it scrolls with the page; only the tag box keeps its own scroller. */
+#quarto-margin-sidebar{ position: static; overflow: visible; max-height: none; }
+
+/* ---- Stylish bullets: archive, tag pages, and post bodies ---- */
+.bk-widget li,
+.bk-post-list li,
+#quarto-document-content ul:not(.list-unstyled):not(.nav):not(.pagination):not(.quarto-listing-grid) > li{
+  position: relative;
+  list-style: none;
+}
+.bk-widget li::before,
+.bk-post-list li::before,
+#quarto-document-content ul:not(.list-unstyled):not(.nav):not(.pagination):not(.quarto-listing-grid) > li::before{
+  content: "";
+  position: absolute;
+  left: -1.05em;
+  top: .62em;
+  width: .5em;
+  height: .5em;
+  background: linear-gradient(135deg, var(--bk-cyan), var(--bk-purple));
+  transform: rotate(45deg);
+  border-radius: 2px;
+  box-shadow: 0 0 6px rgba(0,229,255,.6);
+}
+/* nested lists: smaller, hollow pink diamonds */
+#quarto-document-content ul ul > li::before{
+  background: transparent;
+  border: 1.5px solid var(--bk-pink);
+  box-shadow: 0 0 5px rgba(255,47,180,.5);
+  width: .38em; height: .38em;
+}
+/* give bulleted lists room for the marker */
+#quarto-document-content ul:not(.list-unstyled):not(.nav):not(.pagination){ padding-left: 1.5em; }
+.bk-post-list li::before{ top: .55em; }
+
+/* ---- Small screens: Quarto hides the margin sidebar below 992px; show it as a
+   block under the content so categories, archive and tags stay reachable. ---- */
+@media (max-width: 991.98px){
+  #quarto-margin-sidebar:not(:has(#TOC)){
+    display: block !important;
+    height: auto !important;
+    max-height: none !important;
+    grid-column: page-start / page-end !important;
+    grid-row: 100 !important;
+    order: 100;
+    margin: 1.5rem 16px 2rem;
+    padding: 1rem;
+    border: 1px solid rgba(0,229,255,0.12);
+    border-radius: 14px;
+    background: var(--bk-bg2);
+  }
+}
+
+/* ---- Desktop: "On this page", archive and tag cloud form one block that follows the article
+   (sticky, no gaps). blogkit.js sets its `top` so a tall block still shows its bottom. ---- */
+@media (min-width: 992px){
+  #quarto-margin-sidebar:has(.bk-toc-track){
+    display: flex; flex-direction: column;
+    max-height: none !important; height: auto !important; align-self: stretch;
+  }
+  .bk-toc-track{ position: sticky; top: 5.5rem; align-self: flex-start; width: 100%; }
+  .bk-toc-track #TOC{ position: static; max-height: none; overflow: visible; }
+  .bk-toc-track #bk-widgets{ margin-top: 1.5rem; }
+}
+
+/* ---- Tags page: cloud in the margin ---- */
+.bk-tags-side .bk-tag-cloud{ max-height: 70vh; }
+
+/* ---- Authors: byline links, profile header, post-end card ---- */
+a.bk-author-link{ color: inherit; border-bottom: 1px dotted var(--bk-cyan); text-decoration: none; position: relative; z-index: 2; }
+a.bk-author-link:hover{ color: var(--bk-cyan); }
+.bk-author-img{
+  width: 96px; height: 96px; border-radius: 50% !important; object-fit: cover; flex: none;
+  border: 2px solid var(--bk-cyan); box-shadow: 0 0 14px rgba(0,229,255,.45);
+}
+.bk-author-head{ display: flex; gap: 1.2rem; align-items: center; margin: 1rem 0 1.5rem; }
+.bk-author-bio{ margin: 0 0 .7rem; }
+.bk-author-count{ font-size: 1.2rem; margin: 1.5rem 0 .8rem; }
+.bk-author-card{
+  display: flex; gap: 1rem; align-items: center;
+  margin: 2.5rem 0 .5rem; padding: 1rem;
+  border: 1px solid var(--bk-line); border-radius: 14px;
+  background: linear-gradient(135deg, rgba(0,229,255,.06), rgba(168,85,247,.06));
+}
+.bk-author-card .bk-author-img{ width: 72px; height: 72px; }
+.bk-author-card-name{ font-weight: 700; color: #f2f5ff; }
+.bk-author-card p{ margin: .15rem 0 .4rem; color: var(--bk-muted); font-size: .9rem; }
+.bk-author-more{ font-size: .85rem; color: var(--bk-cyan); text-decoration: none; }
+@media (max-width: 575.98px){ .bk-author-head{ flex-direction: column; text-align: center; } }
+
+/* ---- Author page: filter menu + pagination ---- */
+.bk-filter-bar{ display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; align-items: center; margin: 1.2rem 0 1rem; }
+.bk-filter-bar label{ color: var(--bk-muted); font-size: .85rem; display: flex; align-items: center; gap: .4rem; }
+.bk-filter-bar select{
+  background: var(--bk-bg); color: var(--bk-text);
+  border: 1px solid var(--bk-line); border-radius: 999px;
+  padding: .25rem .8rem; font-size: .85rem; max-width: 14rem;
+}
+.bk-filter-bar select:focus-visible{ outline: none; border-color: var(--bk-cyan); box-shadow: 0 0 8px rgba(0,229,255,.4); }
+.bk-filter-count{ margin-left: auto; color: var(--bk-muted); font-size: .85rem; }
+.bk-post-list > li[hidden]{ display: none; }
+.bk-pager{ display: flex; flex-wrap: wrap; gap: .4rem; justify-content: center; margin: 1.5rem 0 .5rem; }
+.bk-page{
+  background: transparent; color: var(--bk-cyan);
+  border: 1px solid var(--bk-line); border-radius: 999px;
+  min-width: 2.2rem; padding: .2rem .7rem; font-size: .85rem; cursor: pointer;
+}
+.bk-page:hover:not(:disabled), .bk-page.active{ border-color: var(--bk-cyan); background: rgba(0,229,255,.16); }
+.bk-page:disabled{ opacity: .35; cursor: default; }
+
+/* ---- Small-screen "On this page" (our own dropdown; see build_widgets.py) ---- */
+.bk-toc-mobile{ display: none; }
+@media (max-width: 991.98px){
+  /* Quarto's own small-screen TOC toggle is replaced by .bk-toc-mobile */
+  .quarto-sidebar-toggle, #quarto-toc-toggle{ display: none !important; }
+  .bk-toc-mobile{
+    display: block; position: sticky; top: 3.6rem; z-index: 20;
+    margin: 0 0 1.2rem;
+    background: rgba(10,15,30,.94); backdrop-filter: blur(8px);
+    border: 1px solid var(--bk-line); border-radius: 12px;
+    box-shadow: 0 0 18px rgba(0,229,255,.15);
+  }
+  .bk-toc-mobile summary{
+    cursor: pointer; list-style: none; padding: .6rem 1rem;
+    display: flex; align-items: center; justify-content: space-between;
+    color: var(--bk-cyan); text-transform: uppercase; letter-spacing: .14em; font-size: .72rem;
+  }
+  .bk-toc-mobile summary::-webkit-details-marker{ display: none; }
+  .bk-toc-mobile summary::after{
+    content: ""; width: .5rem; height: .5rem; margin-right: .2rem;
+    border-right: 2px solid var(--bk-cyan); border-bottom: 2px solid var(--bk-cyan);
+    transform: rotate(45deg); transition: transform .2s;
+  }
+  .bk-toc-mobile[open] summary::after{ transform: rotate(-135deg); }
+  .bk-toc-mobile nav{
+    max-height: 55vh; overflow-y: auto; border-top: 1px solid var(--bk-line);
+    scrollbar-width: thin; scrollbar-color: var(--bk-cyan) transparent;
+  }
+  .bk-toc-mobile nav::-webkit-scrollbar{ width: 6px; }
+  .bk-toc-mobile nav::-webkit-scrollbar-thumb{
+    background: linear-gradient(180deg, var(--bk-cyan), var(--bk-purple));
+    border-radius: 6px; box-shadow: 0 0 8px rgba(0,229,255,.7);
+  }
+  .bk-toc-mobile a{
+    display: block; padding: .45rem 1rem; font-size: .9rem;
+    color: var(--bk-text); text-decoration: none; border-left: 2px solid transparent;
+  }
+  .bk-toc-mobile a:hover{ background: rgba(0,229,255,.08); border-left-color: var(--bk-cyan); }
+  .bk-toc-mobile a.active{
+    color: var(--bk-cyan); border-left-color: var(--bk-purple);
+    background: linear-gradient(90deg, rgba(168,85,247,.18), transparent);
+    text-shadow: 0 0 8px rgba(0,229,255,.5);
+  }
+}
+
+/* Widgets placed under the article on small screens (posts) */
+.bk-widgets-bottom{
+  margin: 2rem 0 0; padding: 1rem;
+  border: 1px solid rgba(0,229,255,0.12); border-radius: 14px;
+  background: rgba(5,7,13,.5);
+}
+
+/* Tags row below the article body on post pages */
+.bk-post-tags{ display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--bk-line); }
+.bk-post-tags-label{ color: var(--bk-muted); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; margin-right: .2rem; }
+.bk-post-tags .bk-tag{ font-size: .8rem; padding: .05rem .7rem; }
+
+/* Related posts after the tags row */
+.bk-related{ margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--bk-line); }
+.bk-related h2{ font-size: 1.2rem; margin: 0 0 .8rem; border: 0; padding: 0; }
+/* related posts: thumbnail + title rows */
+.bk-rel-list, .bk-related .bk-rel-list{ list-style: none; padding: 0 !important; margin: 0; display: grid; gap: .9rem; }
+.bk-rel-list .bk-rel-item{ margin: 0; padding: 0; }
+.bk-rel-list .bk-rel-item::before{ display: none; }
+.bk-rel-link{
+  display: flex; align-items: center; gap: .9rem; text-decoration: none; color: inherit;
+  padding: .45rem; border: 1px solid var(--bk-line); border-radius: 12px; background: rgba(0,229,255,.03);
+  transition: border-color .15s, background .15s;
+}
+.bk-rel-link:hover{ border-color: var(--bk-cyan); background: rgba(0,229,255,.08); }
+.bk-rel-thumb{ width: 132px; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 8px; flex: none; background: var(--bk-bg); }
+.bk-rel-body{ display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.bk-rel-title{ font-weight: 600; line-height: 1.3; }
+.bk-rel-link:hover .bk-rel-title{ color: var(--bk-cyan); }
+/* tag / category / author lists reuse the rows, with a larger thumbnail and the description */
+.bk-post-list{ display: grid; gap: .9rem; padding-left: 0; }
+.bk-post-list .bk-post-item{ margin: 0; }
+.bk-post-list .bk-post-item::before{ display: none; }
+.bk-post-item .bk-rel-thumb{ width: 168px; }
+.bk-post-item .bk-rel-link{ align-items: flex-start; font-weight: normal; }
+.bk-rel-desc{ color: var(--bk-muted); font-size: .88rem; line-height: 1.4; }
+.bk-post-item .bk-rel-body .bk-tp-date{ margin-left: 0; }
+.bk-rel-body .bk-tp-date{ margin-left: 0; }
+@media (max-width: 575.98px){ .bk-rel-thumb, .bk-post-item .bk-rel-thumb{ width: 96px; } .bk-rel-desc{ display: none; } }
+
+/* previous / next post */
+.bk-postnav{ display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin: 1.5rem 0 0; }
+.bk-postnav-link{
+  display: flex; align-items: center; gap: .9rem; text-decoration: none; color: inherit;
+  padding: .45rem; border: 1px solid var(--bk-line); border-radius: 12px; background: rgba(0,229,255,.03);
+  transition: border-color .15s, background .15s;
+}
+.bk-postnav-link:hover{ border-color: var(--bk-cyan); background: rgba(0,229,255,.08); }
+.bk-postnav-link:hover .bk-rel-title{ color: var(--bk-cyan); }
+.bk-postnav-next{ flex-direction: row-reverse; text-align: right; }
+.bk-postnav-label{ font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--bk-muted); }
+.bk-postnav .bk-rel-body .bk-tp-date{ margin-left: 0; }
+@media (max-width: 767.98px){
+  .bk-postnav{ grid-template-columns: 1fr; }
+  .bk-postnav-next{ flex-direction: row; text-align: left; }
+}
+
+/* ================================================================
+   Light theme (Quarto's navbar toggle adds body.quarto-light).
+   Dark is the default and is untouched above. In light mode the page
+   itself, the navbar, post banner and homepage hero are
+   light too.
+   ================================================================ */
+:root:has(body.quarto-light){
+  --bk-bg: #eef3fb;
+  --bk-bg2: #ffffff;
+  --bk-cyan: #007a99;
+  --bk-purple: #7c3aed;
+  --bk-pink: #c81e8b;
+  --bk-line: rgba(0,122,153,0.30);
+  --bk-text: #1b2542;
+  --bk-muted: #56628a;
+}
+/* navbar, post banner and homepage hero are light too */
+body.quarto-light #quarto-header,
+body.quarto-light #quarto-header .navbar{
+  background: rgba(255,255,255,0.88) !important;
+  border-bottom-color: rgba(20,40,90,0.12);
+}
+body.quarto-light #quarto-header .navbar-brand,
+body.quarto-light #quarto-header .navbar-nav .nav-link,
+body.quarto-light #quarto-header .navbar-title{ color: #1b2542 !important; }
+body.quarto-light #quarto-header .navbar-nav .nav-link:hover,
+body.quarto-light #quarto-header .navbar-nav .nav-link.active{ color: var(--bk-cyan) !important; }
+body.quarto-light #quarto-header .navbar-toggler-icon{ filter: invert(1); }
+body.quarto-light #title-block-header.quarto-title-block,
+body.quarto-light .quarto-title-banner{
+  background: radial-gradient(1200px 400px at 50% -20%, #ffffff 0%, var(--bk-bg) 70%);
+  border-bottom-color: rgba(20,40,90,0.12);
+}
+body.quarto-light .bk-hero{
+  background: radial-gradient(1200px 500px at 50% -10%, #ffffff 0%, var(--bk-bg) 60%);
+}
+
+/* page panel + text */
+body.quarto-light main.content{ border-color: rgba(0,122,153,0.18); box-shadow: 0 8px 30px rgba(20,40,90,0.07); }
+body.quarto-light main.content h1, body.quarto-light main.content h2, body.quarto-light main.content h3,
+body.quarto-light main.content h4, body.quarto-light main.content h5, body.quarto-light main.content h6{ color: #0f1a36; }
+body.quarto-light main.content h2{ border-bottom-color: rgba(20,40,90,0.14); }
+body.quarto-light main.content,
+body.quarto-light main.content p, body.quarto-light main.content li,
+body.quarto-light main.content td, body.quarto-light main.content th,
+body.quarto-light main.content table{ color: #25304f; }
+body.quarto-light main.content a:hover{ color: #00506a; }
+body.quarto-light main.content img{ box-shadow: 0 10px 28px rgba(20,40,90,0.18); }
+body.quarto-light main.content pre,
+body.quarto-light main.content div.sourceCode{ border-color: rgba(20,40,90,0.14); }
+body.quarto-light main.content :not(pre) > code:not(.sourceCode > *){  color: #b04a0b; background-color: rgba(20,40,90,0.07); }
+body.quarto-light main.content pre > code:not(.sourceCode){ color: #25304f; background: none; }
+body.quarto-light main.content .table > :not(caption) > * > *{ border-bottom-color: rgba(20,40,90,0.16); }
+body.quarto-light main.content thead{ color: #0f1a36; }
+body.quarto-light main.content hr{ border-color: rgba(20,40,90,0.16); }
+body.quarto-light .code-copy-button i.bi::before{ filter: none; }
+body.quarto-light .quarto-title-meta-contents a{ color: var(--bk-cyan); }
+
+/* homepage cards */
+body.quarto-light .quarto-listing-container-grid .quarto-grid-item.card{
+  background: #ffffff !important;
+  border-color: rgba(20,40,90,0.14) !important;
+}
+body.quarto-light .quarto-listing-container-grid .quarto-grid-item.card:hover{
+  box-shadow: 0 14px 34px rgba(20,40,90,0.16), 0 0 24px rgba(0,122,153,0.14);
+  border-color: rgba(0,122,153,0.45) !important;
+}
+body.quarto-light .quarto-grid-item .listing-title{ color: #0f1a36 !important; }
+body.quarto-light .quarto-grid-item .card-attribution{ color: #56628a !important; }
+body.quarto-light .quarto-listing-category-title{ color: #0f1a36; }
+body.quarto-light .quarto-listing-filter .input-group-text,
+body.quarto-light .quarto-listing-sort .input-group-text,
+body.quarto-light .quarto-listing-filter .form-control,
+body.quarto-light .quarto-listing-sort .form-select,
+body.quarto-light .listing-pagination .page-link{ border-color: rgba(20,40,90,0.2); }
+body.quarto-light .listing-pagination .page-item.active .page-link{ color: #fff; }
+body.quarto-light #quarto-footer, body.quarto-light .nav-footer{ border-top-color: rgba(20,40,90,0.12); }
+
+/* sidebar widgets, tags, related, author */
+body.quarto-light .bk-widget-title,
+body.quarto-light .bk-author-card-name{ color: #0f1a36; }
+body.quarto-light .bk-widgets-bottom{ background: rgba(255,255,255,0.7); border-color: rgba(20,40,90,0.14); }
+body.quarto-light .bk-tag{ background: rgba(0,122,153,0.08); }
+body.quarto-light .bk-tag:hover, body.quarto-light .bk-tag.active{ background: rgba(0,122,153,0.2); }
+body.quarto-light .bk-author-card{ background: linear-gradient(135deg, rgba(0,122,153,.07), rgba(124,58,237,.07)); }
+body.quarto-light .bk-author-img{ box-shadow: 0 0 10px rgba(0,122,153,.35); }
+body.quarto-light .bk-tag-cloud::-webkit-scrollbar-track{ background: rgba(0,122,153,.1); }
+body.quarto-light .bk-filter-bar select{ background: #fff; }
+body.quarto-light .reveal-code > .hint{ background: rgba(124,58,237,.08); }
+body.quarto-light .bk-toc-mobile{ background: rgba(255,255,255,.95); box-shadow: 0 4px 16px rgba(20,40,90,.15); }
+body.quarto-light .bk-toc-mobile a.active{ text-shadow: none; }
+
+/* callouts: light panel, coloured left border */
+body.quarto-light div.callout.callout-style-default,
+body.quarto-light div.callout.callout-style-simple{
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--callout-color, #007a99) 14%, #ffffff) 0%, #ffffff 70%) !important;
+  box-shadow: 0 4px 16px rgba(20,40,90,0.08);
+  border: 1px solid rgba(20,40,90,0.12) !important;
+  border-left: 5px solid var(--callout-color, var(--bk-cyan)) !important;
+}
+body.quarto-light div.callout.callout-style-default > .callout-header{ background: rgba(20,40,90,0.05) !important; color: #0f1a36 !important; }
+body.quarto-light div.callout .callout-title-container,
+body.quarto-light div.callout .callout-title-container p{ color: #0f1a36 !important; }
+body.quarto-light div.callout.callout-tip{ --callout-color: #059669; }
+body.quarto-light div.callout.callout-warning{ --callout-color: #b7791f; }
+body.quarto-light div.callout.callout-caution{ --callout-color: #c2570c; }
+body.quarto-light div.callout code{ color: #0b5d75; background: rgba(0,122,153,.1); }
+
+/* the theme toggle in the (dark) navbar */
+#quarto-header .quarto-color-scheme-toggle{ color: var(--bk-text); }
+#quarto-header .quarto-color-scheme-toggle:hover{ color: var(--bk-cyan); }
+
+/* ---- Optional homepage hero (.bk-hero), a dark band that works in both themes ---- */
+.bk-hero{
+  background: radial-gradient(1200px 500px at 50% -10%, #0e1930 0%, #05070d 60%);
+  text-align: center;
+  padding: 3.5rem 1.5rem 3rem;
+  margin: -1.5rem -1.75rem 2rem;
+  border-radius: 14px 14px 0 0;
+  --bk-cyan: #00e5ff; --bk-purple: #a855f7; --bk-pink: #ff2fb4; --bk-muted: #9aa4c2;
+}
+.bk-hero h1.bk-title{
+  font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 800; margin: 0 0 .6rem; border: 0;
+  background: linear-gradient(90deg, var(--bk-cyan), #7dd3fc 25%, var(--bk-purple) 55%, var(--bk-pink) 85%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.bk-hero p.bk-subtitle{ max-width: 620px; margin: 0 auto; color: var(--bk-muted); font-size: 1.1rem; }
+body.quarto-light main.content .bk-hero h1.bk-title{ color: transparent; }
+body.quarto-light main.content .bk-hero p.bk-subtitle{ color: var(--bk-muted); }
+body.quarto-light .quarto-title-meta-heading{ color: #56628a; }
+body.quarto-light .quarto-title-meta-contents,
+body.quarto-light .quarto-title-meta-contents p{ color: #25304f; }
+
+/* navbar logo */
+#quarto-header .navbar-logo{ height: 48px; width: auto; max-height: none; }
+
+/* ---- Homepage hero tools (#bk-hero-tools, filled by blogkit.js): search, topic chips, stats ---- */
+#bk-hero-tools{ display: grid; gap: .7rem; margin-top: .9rem; }
+.bk-hero-search{ width: 100%; max-width: 520px; margin: 0 auto; }
+.bk-hero-search input{
+  width: 100%; box-sizing: border-box; padding: .5rem 1rem; font-size: .95rem;
+  color: var(--bk-text); background: rgba(255,255,255,.06);
+  border: 1px solid var(--bk-line); border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+.bk-hero-search input::placeholder{ color: var(--bk-muted); }
+.bk-hero-search input:focus-visible{ outline: none; border-color: var(--bk-cyan); box-shadow: 0 0 12px rgba(0,229,255,.4); }
+/* one row of chips; it scrolls sideways (no scrollbar) when there are more than fit */
+.bk-hero-chips{ display: flex; flex-wrap: nowrap; gap: .4rem; align-items: center; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; min-width: 0; }
+.bk-hero-chips::-webkit-scrollbar{ display: none; }
+.bk-hero-chips .bk-tag{ flex: none; white-space: nowrap; font-size: .8rem; padding: .05rem .7rem; }
+.bk-hero-chips .bk-tag-more{ opacity: .8; }
+.bk-hero-stats{ margin: 0; color: var(--bk-muted); font-size: .82rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .25rem 1.1rem; }
+.bk-stat{ display: inline-flex; align-items: center; gap: .35rem; }
+.bk-icon{ width: 1em; height: 1em; flex: none; fill: none; stroke: var(--bk-cyan); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.bk-hero-tagline{ flex: 0 0 100%; color: var(--bk-text); opacity: .85; }   /* the stats go on the next line */
+@media (max-width: 575.98px){ .bk-hero-tagline{ display: none; } }   /* phones: keep the hero short */
+.bk-hero-rss{ color: var(--bk-cyan); text-decoration: none; }
+.bk-hero-rss:hover{ text-decoration: underline; }
+/* the hero search replaces the listing's own filter box (:has() hides it before the script runs, so it never flashes) */
+.bk-has-hero-tools .quarto-listing-filter,
+:root:has(#bk-hero-tools) .quarto-listing-filter{ display: none; }
+/* Smooth load: with `{{< include _bk-hero-tools.html >}}` the tools are in the page from the first paint.
+   Without it the script builds them, so reserve their height meanwhile and fade them in. */
+#bk-hero-tools:empty{ min-height: 7.8rem; }
+@media (min-width: 768px){ #bk-hero-tools:empty{ min-height: 5.8rem; } }
+#bk-hero-tools.bk-hero-built > *{ animation: bk-hero-in .25s ease-out both; }
+@keyframes bk-hero-in{ from{ opacity: 0; transform: translateY(4px); } to{ opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce){ #bk-hero-tools.bk-hero-built > *{ animation: none; } }
+/* desktop: search and chips side by side, stats underneath */
+@media (min-width: 768px){
+  #bk-hero-tools{ grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: .6rem 1rem; }
+  .bk-hero-search{ max-width: none; margin: 0; }
+  .bk-hero-stats{ grid-column: 1 / -1; }
+}
+
+/* ---- Figures in the light theme ----
+   Generated figures (SVGs, and the PNG covers made from them) are drawn on a dark background.
+   In the light theme they are inverted (and hue-rotated back), so they read as light diagrams
+   instead of dark boxes on a light page. Photos, screenshots and real plots are not touched:
+   only .svg images in post bodies and covers flagged `adapt` by the hook (a PNG with a same-named SVG). */
+body.quarto-light #quarto-document-content img[src$=".svg"],
+body.quarto-light .bk-adapt{ filter: invert(1) hue-rotate(180deg); }
+/* hero search field on a light page */
+body.quarto-light .bk-hero-search input{ background: #fff; }
+
+/* lists are rebuilt on page change: no scroll anchoring, so the jump to the top is not undone */
+.bk-post-list, .bk-tag-section{ overflow-anchor: none; }

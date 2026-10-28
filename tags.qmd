@@ -1,0 +1,16 @@
+---
+title: "Posts by Tag"
+description: "Browse every post by tag."
+page-layout: article
+toc: false
+---
+
+::: {.column-margin}
+```{=html}
+<div id="bk-tags-side" class="bk-widget bk-tags bk-tags-side"></div>
+```
+:::
+
+```{=html}
+<div id="bk-tags-page"></div>
+```

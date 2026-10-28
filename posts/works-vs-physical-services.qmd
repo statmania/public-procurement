@@ -1,0 +1,47 @@
+---
+title: "Works vs Physical Services under PPR 2025"
+description: "How the Public Procurement Rules (PPR) 2025 separate Works from Physical Services, with examples, standard documents and evaluation differences."
+date: "2026-10-28"
+categories: [Procurement]
+tags: [ppr-2025, bppa, works, physical-services, e-gp]
+author: "Abdullah Adil Mahmud"
+image: ../img/works-vs-physical-services.svg
+---
+
+Under the Public Procurement Rules (PPR) 2025, enacted by the Bangladesh Public Procurement Authority (BPPA), public procurement is organised into distinct categories. The key difference between **Works** and **Physical Services** is whether the contract requires constructing or modifying a tangible structure, or delivering routine operational tasks.
+
+### Direct Comparison
+
+| Feature | Works | Physical Services (non-consulting) |
+| :--- | :--- | :--- |
+| **Core objective** | Construction, civil engineering, rehabilitation or physical modification of a facility or asset. | Operational, transactional or routine support tasks that are measurable but do not result in structural building. |
+| **Nature of output** | Tangible built infrastructure (roads, buildings, water supplies, bridges). | Execution of a continuous or standalone activity (security, cleaning, logistics). |
+| **Standard documents** | Standard e-Tender Documents for Works (e.g. e-PW3). | Standard e-Tender Documents for Physical Services (e.g. e-PPS3, e-PPS6). |
+| **Examples** | Building a bridge or highway; constructing school buildings; major pipe installation or tube well development. | Outsourced janitorial, catering or security services; ICT data collection, training and testing; operations and maintenance (O&M) of existing facilities. |
+
+### Works (Civil and Engineering Projects)
+
+- **Definition:** executing construction or repair projects that involve engineering designs, physical site development and capital investment.
+- **Rule change:** a notable update to the national Works framework is the removal of the ±10% price cap under the Open Tendering Method (OTM), to improve market compliance.
+- **Evaluation:** bids are assessed heavily on performance security, compliance with technical drawings, structural engineering capability and financial capability.
+
+### Physical Services (Non-Consulting Services)
+
+- **Definition:** action-based tasks that need physical execution but involve no building or construction. They are distinct from Intellectual/Consulting Services, which focus on mental expertise, policy or advisory work.
+- **Separate classification:** PPR 2025 recognises Physical Services as a standalone procurement category. This stops procuring entities from forcing routine maintenance or outsourcing into Goods or Works template contracts.
+- **Evaluation:** monitored through Activity Schedules and Performance Specifications, using specialised e-GP templates. Significantly low-priced tenders (SLT) are screened out using a standard deviation formula, to protect worker wages and service standards.
+
+### A Quick Rule of Thumb
+
+Ask what the contract leaves behind. If the answer is a built or modified asset, it is Works. If the answer is a service performed over time, with nothing structural left at the end, it is Physical Services.
+
+### Sources
+
+- [BPPA news item on PPR 2025](https://www.bppa.gov.bd/media-communication/news-1497.html)
+- [BPPA standard document e-PPS3](https://www.bppa.gov.bd/upload/standarddocument/2026-01-04-13-49-32-e-PPS3.pdf)
+- [e-GP portal](https://www.eprocure.gov.bd/)
+- [Understanding procurement nature: goods, works, services (LinkedIn)](https://www.linkedin.com/pulse/understanding-procurement-nature-goods-works-services-rashid--nuu0c)
+
+::: {.callout-note}
+This post summarises secondary sources. Check the current PPR 2025 text and the relevant standard tender document before drafting a specification.
+:::

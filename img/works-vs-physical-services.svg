@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-label="Works versus physical services">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0f1e"/><stop offset="1" stop-color="#14224a"/></linearGradient></defs>
+  <rect width="400" height="200" fill="url(#g)"/>
+  <g fill="none" stroke="#00e5ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 150 H170 M60 150 V90 H150 V150 M80 90 V60 H130 V90"/>
+  </g>
+  <g fill="none" stroke="#ff2fb4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M230 150 H360 M250 150 V110 M295 150 V80 M340 150 V120"/>
+    <circle cx="250" cy="98" r="8"/><circle cx="295" cy="68" r="8"/><circle cx="340" cy="108" r="8"/>
+  </g>
+  <g fill="#e6edf7" font-family="Verdana, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">
+    <text x="105" y="182">Works</text><text x="295" y="182">Physical Services</text>
+  </g>
+</svg>

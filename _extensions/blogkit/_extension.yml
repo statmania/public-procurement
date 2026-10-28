@@ -1,0 +1,18 @@
+title: Blogkit
+author: Blogkit contributors
+version: 0.1.0
+quarto-required: ">=1.5.0"
+contributes:
+  formats:
+    html:
+      # dark is listed first, so it is the default; Quarto adds the navbar toggle
+      theme:
+        dark: [cosmo, theme-dark.scss]
+        light: cosmo
+      css: styles.css
+      highlight-style:
+        light: github
+        dark: dracula
+      include-after-body:
+        - code-reveal.html
+        - site-include.html

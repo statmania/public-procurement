@@ -1,0 +1,16 @@
+---
+title: "Posts by Category"
+description: "Browse every post by category."
+page-layout: article
+toc: false
+---
+
+::: {.column-margin}
+```{=html}
+<div id="bk-cats-side" class="bk-widget bk-tags bk-tags-side"></div>
+```
+:::
+
+```{=html}
+<div id="bk-cats-page"></div>
+```

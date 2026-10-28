@@ -1,0 +1,6 @@
+# applies to every post
+freeze: true              # do not re-run R/Python code on each render
+toc: true                 # the sidebar (table of contents + archive + tags) needs this
+toc-depth: 3
+toc-title: "On this page"
+title-block-banner: true

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="sigmaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="55%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+    <linearGradient id="integralGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="50%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#ff2fb4"/>
+    </linearGradient>
+    <radialGradient id="bgGrad" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#101a34"/>
+      <stop offset="100%" stop-color="#05070d"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="badgeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <circle cx="300" cy="300" r="284" fill="none" stroke="#00e5ff" stroke-opacity="0.35" stroke-width="6" filter="url(#badgeGlow)"/>
+  <circle cx="300" cy="300" r="278" fill="url(#bgGrad)"/>
+  <circle cx="300" cy="300" r="278" fill="none" stroke="#00e5ff" stroke-opacity="0.5" stroke-width="2"/>
+  <circle cx="300" cy="300" r="266" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+
+  <circle cx="300" cy="300" r="150" fill="#00e5ff" opacity="0.16" filter="url(#softGlow)"/>
+
+  <path d="M 402 172 L 206 172 L 346 300 L 206 428 L 402 428"
+        fill="none" stroke="url(#sigmaGrad)" stroke-width="38"
+        stroke-linejoin="round" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g filter="url(#glow)">
+    <path d="M 384 78
+             C 367 70, 345 67, 327 72
+             C 307 78, 297 95, 294 120
+             C 291 145, 290 180, 290 300
+             C 290 420, 289 455, 286 480
+             C 283 505, 273 522, 253 528
+             C 235 533, 213 530, 196 522"
+          fill="none" stroke="url(#integralGrad)" stroke-width="25"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

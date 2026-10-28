@@ -1,0 +1,49 @@
+<script>
+/* Blog-wide "See hint" / "Reveal code" toggles.
+   Markup in a post:
+     ::: {.reveal-code}
+     ::: {.hint}
+     Hint text
+     :::
+
+     ```c
+     code
+     ```
+     :::
+   Without JavaScript the code and hint simply stay visible. */
+(function () {
+  function init() {
+    document.querySelectorAll('.reveal-code').forEach(function (box, n) {
+      var hint = box.querySelector(':scope > .hint');
+      var code = box.querySelector(':scope > .code-copy-outer-scaffold, :scope > .sourceCode, :scope > pre');
+      if (!code) return;
+      var bar = document.createElement('div');
+      bar.className = 'rc-bar';
+      function button(label, target, shown, hidden) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'rc-btn';
+        b.textContent = shown;
+        b.setAttribute('aria-expanded', 'false');
+        b.setAttribute('aria-controls', target.id);
+        b.addEventListener('click', function () {
+          var open = target.classList.toggle('rc-open');
+          b.textContent = open ? hidden : shown;
+          b.setAttribute('aria-expanded', open);
+        });
+        bar.appendChild(b);
+      }
+      code.id = code.id || 'rc-code-' + n;
+      if (hint) {
+        hint.id = hint.id || 'rc-hint-' + n;
+        button('hint', hint, 'See hint', 'Hide hint');
+      }
+      button('code', code, 'Reveal code', 'Hide code');
+      box.insertBefore(bar, box.firstChild);
+      box.classList.add('rc-ready');
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>

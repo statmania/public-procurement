@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-label="National versus international tendering">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a0f1e"/><stop offset="1" stop-color="#14224a"/></linearGradient></defs>
+  <rect width="400" height="200" fill="url(#g)"/>
+  <g fill="none" stroke="#00e5ff" stroke-width="4" stroke-linecap="round">
+    <circle cx="105" cy="85" r="8"/><circle cx="75" cy="115" r="8"/><circle cx="135" cy="115" r="8"/>
+    <path d="M99 91 L81 109 M111 91 L129 109 M83 115 H127"/>
+  </g>
+  <g fill="none" stroke="#ff2fb4" stroke-width="4" stroke-linecap="round">
+    <circle cx="295" cy="100" r="42"/><ellipse cx="295" cy="100" rx="18" ry="42"/><path d="M253 100 H337 M262 78 H328 M262 122 H328"/>
+  </g>
+  <g fill="#e6edf7" font-family="Verdana, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">
+    <text x="105" y="170">NCT</text><text x="295" y="170">ICT</text>
+  </g>
+</svg>

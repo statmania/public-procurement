@@ -1,0 +1,49 @@
+project:
+  type: website
+  output-dir: docs
+  pre-render: _extensions/blogkit/build_site_data.py
+  post-render: _extensions/blogkit/repair_index.py
+  resources:
+    - img/placeholder.svg
+  render:
+    - "*.qmd"
+    - "posts/*.qmd"
+    - "authors/*.qmd"
+
+website:
+  title: "Stat Mania · Public Procurement"
+  favicon: img/statmania_logo.svg
+  site-url: "https://www.statmania.info/public-procurement/"
+  description: "Notes on public procurement rules and practice in Bangladesh."
+  navbar:
+    logo: img/statmania_logo.svg
+    background: dark
+    left:
+      - href: index.qmd
+        text: Home
+      - href: tags.qmd
+        text: Tags
+      - href: categories.qmd
+        text: Categories
+    right:
+      - about.qmd
+
+  page-footer:
+    left: "© 2026 Stat Mania"
+    center:
+      - text: "Tags"
+        href: tags.qmd
+      - text: "Categories"
+        href: categories.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - text: "RSS"
+        href: index.xml
+
+format:
+  blogkit-html: default
+
+blogkit:
+  per-page: 10
+  related: 5
