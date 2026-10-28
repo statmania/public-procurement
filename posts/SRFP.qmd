@@ -1,0 +1,58 @@
+---
+title: "SRFP: The Standard Request for Proposal"
+description: "What a Standard Request for Proposal (SRFP) is, how BPPA uses it to procure consulting services, and how it differs from a Standard Tender Document."
+date: "2026-10-28"
+categories: [Procurement]
+tags: [bppa, srfp, consulting-services, e-gp]
+author: "Abdullah Adil Mahmud"
+---
+
+In procurement, **SRFP** stands for **Standard Request for Proposal**. It is a model bidding document used to select consultants and other providers of intellectual and professional services, such as IT development, auditing, engineering design or research.
+
+Unlike a regular tender for goods or works, where price usually decides the outcome, an SRFP weighs technical quality alongside cost to find the most qualified provider.
+
+In Bangladesh, the Bangladesh Public Procurement Authority (BPPA) publishes the SRFPs for procuring services under the Public Procurement Act 2006 and the Public Procurement Rules (PPR) 2025.
+
+### Core structure
+
+An SRFP combines sections that stay fixed with sections the procuring entity completes for each assignment. The usual parts are:
+
+1. **Letter of Invitation (LOI):** the formal invitation to shortlisted consultants.
+2. **Instructions to Consultants (ITC):** how to prepare, structure and submit a proposal, and how it will be evaluated.
+3. **Proposal Data Sheet (PDS):** the assignment-specific section, with deadlines, contact points and requirements.
+4. **Technical Proposal forms:** templates for the firm's experience, methodology, work plan and staff qualifications.
+5. **Financial Proposal forms:** templates for fees, costs and the overall price.
+6. **Terms of Reference (TOR):** the scope of work, objectives, deliverables and timeline the client expects.
+7. **Conditions of Contract (GCC and PCC):** the legal framework for the resulting contract.
+
+### SRFP vs. Standard Tender Document
+
+| Feature | SRFP | Standard Tender Document (STD) |
+| :--- | :--- | :--- |
+| **Primary use** | Intellectual, professional and consulting services | Goods, works and physical services |
+| **Focus** | Methodology, skills and quality of the solution, with cost | Technical compliance and price |
+| **Examples** | Software implementation, project management, financial audit | Building a road, buying equipment, routine maintenance |
+
+### SRFP codes on BPPA's list
+
+BPPA's offline SRFP page lists the following documents. The code depends on who is being hired, whether the contract is lump sum or time-based, and, for firms, the contract value.
+
+| Code | Scope | Hires | Contract type |
+| :--- | :--- | :--- | :--- |
+| PS3 | National | Individual consultant | Lump sum |
+| PS4 | National | Individual consultant | Time-based |
+| PS5 | National | Consulting firm, up to BDT 1 crore | Simple lump sum |
+| PS6 | National | Consulting firm, up to BDT 1 crore | Simple time-based |
+| PS7 | National | Consulting firm, above BDT 1 crore | Complex lump sum |
+| PS8 | National | Consulting firm, above BDT 1 crore | Complex time-based |
+| PS7A | National | Consulting firm for software and IT-enabled services, above BDT 10 million | Complex lump sum |
+| PS11 | International | Consulting firm, any value | Lump sum |
+| PS12 | International | Consulting firm, any value | Time-based |
+
+Use the version currently published on BPPA's site, since documents are reissued when the rules change.
+
+### Sources
+
+- [BPPA: Offline Standard Request for Proposal](https://bppa.gov.bd/standard-documents/offline-standard-request-for-proposal.html)
+- [BPPA: Standard documents archive](https://www.bppa.gov.bd/standard-documents/standard-archive.html)
+- [e-GP portal: e-STD](https://www.eprocure.gov.bd/eSTD.jsp)

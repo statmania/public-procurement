@@ -1,6 +1,6 @@
 ---
 title: "NCT vs ICT Tendering in Bangladesh"
-description: "How National Competitive Tendering (NCT) and International Competitive Tendering (ICT) differ in scope, language, timeline, cost and typical use under e-GP and the Public Procurement Rules."
+description: "National Competitive Tendering (NCT) and International Competitive Tendering (ICT) on Bangladesh's e-GP system: who they are aimed at, and the differences in fees, currency and price screening."
 date: "2026-10-28"
 categories: [Procurement]
 tags: [nct, ict, tendering, e-gp, ppr-2025, bppa]
@@ -8,38 +8,43 @@ author: "Abdullah Adil Mahmud"
 image: ../img/nct-vs-ict-tender.svg
 ---
 
-In Bangladesh public procurement, under the Electronic Standard Tender Documents (eSTDs) on e-GP and the Public Procurement Rules, **NCT** (National Competitive Tendering) and **ICT** (International Competitive Tendering) are the two main methods for inviting bids. The choice depends on the geographic scope, value and technical complexity of the contract.
+In Bangladesh public procurement, tenders are run as **NCT** (National Competitive Tendering) or **ICT** (International Competitive Tendering). Both are published and managed on the e-GP portal under the Public Procurement Act 2006 and the Public Procurement Rules (PPR) 2025, administered by BPPA.
 
 ::: {.callout-warning}
-Here **ICT** means *International* Competitive Tendering. It is unrelated to the ICT Division (Information and Communication Technology), which is mentioned further down as a place to find tech tenders.
+Here **ICT** means *International* Competitive Tendering. It is unrelated to the ICT Division (Information and Communication Technology), which is mentioned below only as a place that posts tech tenders.
 :::
 
 ### Key Differences
 
 | Feature | NCT (National) | ICT (International) |
 | :--- | :--- | :--- |
-| **Participant scope** | Local suppliers, contractors or consultants within Bangladesh | Global and domestic suppliers and contractors |
-| **Bidding language** | Typically the local language (Bangla) | English (and/or the local language) |
-| **Market competition** | Domestic market only | International market |
-| **Timeline** | Shorter bidding and processing windows | Longer, because of international advertising, shipping and clarification rules |
-| **Bidder cost and complexity** | Lower cost, low regulatory complexity | Higher cost and complexity: foreign exchange, international law, multi-currency terms |
-| **Typical use** | Routine goods, small-to-medium works, local services | Specialised goods, high-value contracts, technology-intensive or large infrastructure projects |
+| **Aimed at** | The domestic market | Foreign as well as domestic suppliers and contractors |
+| **Tender document fee** | Paid in BDT | Tk 12,000 per tender (e-GP release, August 2025); an earlier release required USD |
+| **Tender security** | In BDT | In USD (July 2024 e-GP release) |
+| **e-GP registration** | Local tenderer registration | A separate international tenderer registration; fees listed as Tk 12,000 (registration) and Tk 5,000 (renewal) |
+| **Foreign bank details** | Not needed | SWIFT code or routing number can be entered |
+| **SLT price screening** | Applies | Does not apply (e-GP states SLT is for national tenders only) |
+| **Typical use** | Routine goods, small-to-medium works, local services | Specialised goods, high-value or technology-intensive contracts |
 
-### Where to Find and Manage Tenders
+The "typical use" row is a rule of thumb. The choice for a given package follows the PPR and the procuring entity's market assessment, not a fixed list.
 
-- **e-GP portal:** the official electronic government procurement platform, where both NCT and ICT packages are published.
-- **Line ministries and departments:** bodies such as the [ICT Division](https://ictd.gov.bd/pages/tenders) and the [Department of ICT](https://doict.gov.bd/pages/tenders) regularly post e-tender notices for technology tools, network installation and consultancy.
-- **Aggregators:** sites like [BDTender](https://bdtender.com/dept/Org-673/ministry-information-communication-technology/ict-division-tender-notice) collect active notices from the ICT ministry and related sectors.
+### Which Document Fits
 
-### Choosing Between Them
+BPPA publishes separate standard tender documents for national procurement (for example e-PW3 for works and e-PPS3 for physical services, both labelled "National") and for international procurement. Pick the one that matches the package category and method.
 
-Start with who can realistically supply the item. If the local market can deliver at fair value, NCT is faster and cheaper for everyone. If the item is specialised or high-value enough that foreign suppliers are needed for real competition, ICT is the route, at the price of a longer timeline and heavier bidder paperwork.
+### Where to Find Tenders
+
+- **e-GP portal:** the official platform where both NCT and ICT packages are published.
+- **Ministries and departments:** the [ICT Division](https://ictd.gov.bd/pages/tenders) and the [Department of ICT](https://doict.gov.bd/pages/tenders) post tenders for technology tools, networks and consultancy.
+- **Aggregators:** [BDTender](https://bdtender.com/dept/Org-673/ministry-information-communication-technology/ict-division-tender-notice) collects notices from the ICT ministry. It is a private site, so confirm every notice on e-GP.
 
 ### Sources
 
-- [Comparative analysis of NCT and ICT procurement (LinkedIn)](https://www.linkedin.com/pulse/comparative-analysis-nct-ict-procurement-national-vs-rashid--f6usc)
-- [e-GP portal](https://www.eprocure.gov.bd/)
+- [e-GP portal: new features](https://www.eprocure.gov.bd/NewFeature.jsp)
+- [BPPA: key changes in PPR 2025](https://bppa.gov.bd/media-communication/news-1517.html)
+- [PPR 2025 (BPPA, PDF)](https://bppa.gov.bd/upload/policyandprocedure/2025-09-29-20-12-59-PPR2025.pdf)
+- [BPPA standard tender documents](https://www.bppa.gov.bd/standard-documents/online-standard-tender-document.html)
 
 ::: {.callout-note}
-This post summarises secondary sources. Check the current PPR text, value thresholds and the relevant standard tender document before choosing a method.
+Fees and currency rules come from e-GP release notes and can change. The PPR 2025 PDF could not be text-extracted, so the legal thresholds and minimum tender periods for NCT and ICT are not covered here. Check the rules before choosing a method.
 :::

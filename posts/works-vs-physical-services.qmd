@@ -1,6 +1,6 @@
 ---
 title: "Works vs Physical Services under PPR 2025"
-description: "How the Public Procurement Rules (PPR) 2025 separate Works from Physical Services, with examples, standard documents and evaluation differences."
+description: "How Bangladesh's Public Procurement Rules (PPR) 2025 treat Works and Physical Services as separate categories, and what that means for standard tender documents and price screening."
 date: "2026-10-28"
 categories: [Procurement]
 tags: [ppr-2025, bppa, works, physical-services, e-gp]
@@ -8,40 +8,67 @@ author: "Abdullah Adil Mahmud"
 image: ../img/works-vs-physical-services.svg
 ---
 
-Under the Public Procurement Rules (PPR) 2025, enacted by the Bangladesh Public Procurement Authority (BPPA), public procurement is organised into distinct categories. The key difference between **Works** and **Physical Services** is whether the contract requires constructing or modifying a tangible structure, or delivering routine operational tasks.
+The Public Procurement Rules (PPR) 2025, issued under the Public Procurement Act 2006 by the Bangladesh Public Procurement Authority (BPPA), came into effect on **28 September 2025** and replaced PPR 2008. Two of the changes BPPA lists matter here:
 
-### Direct Comparison
+- **Physical services are now a distinct procurement category.** Before, routine services were often squeezed into Goods or Works templates.
+- **The ±10% price limit is removed** for national works procurement.
 
-| Feature | Works | Physical Services (non-consulting) |
+The practical difference between **Works** and **Physical Services** comes down to what the contract leaves behind: a built or modified asset, or a service performed.
+
+### Comparison
+
+| Feature | Works | Physical Services |
 | :--- | :--- | :--- |
-| **Core objective** | Construction, civil engineering, rehabilitation or physical modification of a facility or asset. | Operational, transactional or routine support tasks that are measurable but do not result in structural building. |
-| **Nature of output** | Tangible built infrastructure (roads, buildings, water supplies, bridges). | Execution of a continuous or standalone activity (security, cleaning, logistics). |
-| **Standard documents** | Standard e-Tender Documents for Works (e.g. e-PW3). | Standard e-Tender Documents for Physical Services (e.g. e-PPS3, e-PPS6). |
-| **Examples** | Building a bridge or highway; constructing school buildings; major pipe installation or tube well development. | Outsourced janitorial, catering or security services; ICT data collection, training and testing; operations and maintenance (O&M) of existing facilities. |
+| **Core objective** | Construction, civil engineering, rehabilitation or physical modification of a facility or asset | Services that are physically carried out but do not build or construct anything |
+| **Output** | A built asset: road, building, bridge, water supply | A task or activity delivered, such as maintenance or logistics |
+| **Standard tender document** | e-PW3 (Works, Open Tendering Method) | e-PPS3 (Open/Limited Tendering), e-PPS6 (Direct Procurement) |
+| **Pricing basis** | Bill of Quantities | Activity Schedule, with Performance Specifications |
+| **Price screening** | The ±10% limit no longer applies in national works | Significantly Low-priced Tender (SLT) test, in national tenders |
 
-### Works (Civil and Engineering Projects)
+Physical Services also differ from **intellectual and professional services**, which are about expertise and advice rather than physical execution.
 
-- **Definition:** executing construction or repair projects that involve engineering designs, physical site development and capital investment.
-- **Rule change:** a notable update to the national Works framework is the removal of the ±10% price cap under the Open Tendering Method (OTM), to improve market compliance.
-- **Evaluation:** bids are assessed heavily on performance security, compliance with technical drawings, structural engineering capability and financial capability.
+### Works
 
-### Physical Services (Non-Consulting Services)
+Works contracts cover construction and repair projects: roads, buildings, bridges, water supply and similar assets. BPPA's e-PW3 is the standard tender document for works under the Open Tendering Method, and a new version was issued under PPR 2025.
 
-- **Definition:** action-based tasks that need physical execution but involve no building or construction. They are distinct from Intellectual/Consulting Services, which focus on mental expertise, policy or advisory work.
-- **Separate classification:** PPR 2025 recognises Physical Services as a standalone procurement category. This stops procuring entities from forcing routine maintenance or outsourcing into Goods or Works template contracts.
-- **Evaluation:** monitored through Activity Schedules and Performance Specifications, using specialised e-GP templates. Significantly low-priced tenders (SLT) are screened out using a standard deviation formula, to protect worker wages and service standards.
+The ±10% limit used to tie the acceptable range of national works bids to the official estimate. PPR 2025 removes it.
 
-### A Quick Rule of Thumb
+### Physical Services
 
-Ask what the contract leaves behind. If the answer is a built or modified asset, it is Works. If the answer is a service performed over time, with nothing structural left at the end, it is Physical Services.
+Physical Services are services delivered through physical work that do not involve construction. Typical illustrations are maintenance and operations of existing facilities and logistics. Which standard document applies depends on the method and the type of service:
+
+| Document | Covers |
+| :--- | :--- |
+| **e-PPS3** | National tenders for physical services, except hiring service personnel through outsourcing; Open or Limited Tendering; award to the lowest evaluated responsive tender |
+| **e-PPS6** | Physical services under the Direct Procurement Method |
+| **e-PPS2** | Hiring service personnel through the outsourcing policy |
+
+In e-PPS3 the employer states its needs in the Tender Data Sheet and Particular Conditions of Contract, and in two sections specific to this category: the **Activity Schedule** (tenderers price each activity) and the **Performance Specifications**.
+
+#### Significantly Low-priced Tenders (SLT)
+
+e-PPS3 screens out abnormally low prices with a formula. Among technically responsive tenders (at least two), it computes a weighted average of:
+
+- the official cost estimate (weight 0.20),
+- a recent national price index from e-GP awards for physical services (weight 0.30), and
+- the prices quoted by responsive tenderers (weight 0.50).
+
+It then computes the weighted standard deviation of the quoted prices. The lower limit of acceptable prices is the weighted average minus one standard deviation. A tender below that limit is treated as financially non-responsive and rejected.
+
+### Caveats
+
+- e-PPS3 and e-PPS6 were posted by BPPA as *preliminary working drafts*, so details may change. Always download the current version.
+- The e-GP portal states that the SLT calculation applies only to national competitive tenders.
 
 ### Sources
 
-- [BPPA news item on PPR 2025](https://www.bppa.gov.bd/media-communication/news-1497.html)
-- [BPPA standard document e-PPS3](https://www.bppa.gov.bd/upload/standarddocument/2026-01-04-13-49-32-e-PPS3.pdf)
-- [e-GP portal](https://www.eprocure.gov.bd/)
-- [Understanding procurement nature: goods, works, services (LinkedIn)](https://www.linkedin.com/pulse/understanding-procurement-nature-goods-works-services-rashid--nuu0c)
+- [BPPA: key changes in PPR 2025](https://bppa.gov.bd/media-communication/news-1517.html)
+- [BPPA: draft PPR revision news](https://www.bppa.gov.bd/media-communication/news-1497.html)
+- [PPR 2025 (BPPA, PDF)](https://bppa.gov.bd/upload/policyandprocedure/2025-09-29-20-12-59-PPR2025.pdf)
+- [e-PPS3 standard tender document (BPPA, PDF)](https://www.bppa.gov.bd/upload/standarddocument/2026-01-04-13-49-32-e-PPS3.pdf)
+- [e-PPS6 standard tender document (BPPA, PDF)](https://www.bppa.gov.bd/upload/standarddocument/2026-03-16-15-13-44-e-PPS6.pdf)
+- [e-GP portal: new features](https://www.eprocure.gov.bd/NewFeature.jsp)
 
 ::: {.callout-note}
-This post summarises secondary sources. Check the current PPR 2025 text and the relevant standard tender document before drafting a specification.
+Checked against BPPA and e-GP pages and the e-PPS3 document. The PPR 2025 PDF is in a legacy Bangla font that I could not extract, so rule-level definitions were not checked against its text.
 :::
